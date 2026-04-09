@@ -1,7 +1,7 @@
 set -gx EDITOR nvim
 
 # Aliases
-alias vim nivm
+alias vim nvim
 alias vi nvim
 alias ll="eza -la"
 alias pv="source .venv/bin/activate.fish"

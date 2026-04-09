@@ -38,3 +38,5 @@ echo "Setup complete"
 #   starship
 #   zoxide
 #   eza
+#   cargo install --locked tree-sitter-cli
+#   brew install luarocks
