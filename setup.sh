@@ -3,7 +3,7 @@
 echo "Setting up dev environment"
 echo -e "\nCreating symlinks...\n"
 
-for i in nvim alacritty; do
+for i in nvim alacritty zellij; do
   ln -sfn $PWD/$i ~/.config/$i
   echo "Symlinked: $i"
 done
@@ -40,3 +40,4 @@ echo "Setup complete"
 #   eza
 #   cargo install --locked tree-sitter-cli
 #   brew install luarocks
+#   cargo install --locked zellij
