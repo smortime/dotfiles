@@ -28,8 +28,13 @@ else
   echo "base_config already sourced in $ROOT_FISH"
 fi
 
-ln -sfn $PWD/fish/fish_variables ~/.config/fish/fish_variables
-echo -e "Symlinked fish_variables\n"
+FUNCTIONS_DIR=$HOME/.config/fish/functions
+if [ -e "$FUNCTIONS_DIR" ] && [ ! -L "$FUNCTIONS_DIR" ]; then
+  echo "Removing existing non-symlinked $FUNCTIONS_DIR (functions should live in dotfiles/fish/functions)"
+  rm -rf "$FUNCTIONS_DIR"
+fi
+ln -sfn $PWD/fish/functions $FUNCTIONS_DIR
+echo -e "Symlinked fish functions\n"
 
 echo "Setup complete"
 
